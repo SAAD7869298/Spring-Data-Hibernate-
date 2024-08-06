@@ -16,17 +16,14 @@ public class Course {
 	private String description;
 
 	/*
-	 * relationship Course and Student (M:M)
-	 *  in tabel Enrollments
+	 * relationship Course and Student (M:M) in tabel Enrollments
 	 * 
-	 * */
+	 */
 	@ManyToMany(mappedBy = "courses")
 	private List<Student> students = new ArrayList<Student>();
 
-	
-	
 	@ManyToOne
-    @JoinColumn(name = "teacher_id")
+	@JoinColumn(name = "teacher_id")
 	private Teacher teacher;
 
 	public Course() {
@@ -36,7 +33,6 @@ public class Course {
 		this.courseName = courseName;
 		this.description = description;
 	}
-	
 
 	public int getCourseId() {
 		return courseId;
@@ -49,8 +45,6 @@ public class Course {
 	public void setStudents(List<Student> students) {
 		this.students = students;
 	}
-
-	
 
 	public Teacher getTeacher() {
 		return teacher;

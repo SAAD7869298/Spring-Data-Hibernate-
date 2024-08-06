@@ -14,6 +14,7 @@ public class Teacher {
 	private int teacherId;
 	private String firstName;
 	private String lastName;
+	
 	private String email;
 
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "teacher")
