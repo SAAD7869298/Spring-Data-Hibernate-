@@ -17,7 +17,7 @@ public class Teacher {
 	
 	private String email;
 
-	@OneToMany(cascade = CascadeType.ALL, mappedBy = "teacher")
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "teacher" , fetch = FetchType.EAGER)
 	private List<Course> courses = new ArrayList<Course>();
 
 	public Teacher() {

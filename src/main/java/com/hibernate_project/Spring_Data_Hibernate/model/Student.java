@@ -5,6 +5,9 @@ import java.util.List;
 
 import javax.persistence.*;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 
 @Entity
 @Table(name = "Student")
@@ -18,7 +21,6 @@ public class Student {
 	private String dateOfBirth;
 	private String gender;
 	private String email;
-	
 	
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "student_detail_id")
