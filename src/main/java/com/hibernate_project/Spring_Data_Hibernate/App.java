@@ -4,14 +4,12 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.hibernate_project.Spring_Data_Hibernate.config.AppConfig;
 import com.hibernate_project.Spring_Data_Hibernate.model.Course;
 import com.hibernate_project.Spring_Data_Hibernate.model.Student;
 import com.hibernate_project.Spring_Data_Hibernate.model.StudentDetail;
 import com.hibernate_project.Spring_Data_Hibernate.model.Teacher;
-import com.hibernate_project.Spring_Data_Hibernate.model.addddd;
 
 /**
  * Hello world!
@@ -37,7 +35,7 @@ public class App {
 		Teacher teacher = context_config.getBean(Teacher.class);
 		teacher.getCourses().add(course);
 		teacher.getCourses().add(course2);
-/*
+
 		try {
 			// Start a transaction
 			session.beginTransaction();
@@ -68,7 +66,6 @@ public class App {
 			session.close();
 			context_config.close();
 		}
-*/
-		context_config.close();
+
 	}
 }
